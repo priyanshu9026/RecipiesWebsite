@@ -5,7 +5,6 @@ import userRouter from "./routes/user.js";
 import recipeRouter from "./routes/recipe.js";
 import cors from "cors";
 
-// Load environment variables
 dotenv.config();
 
 const app = express();
@@ -14,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: true,
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
