@@ -1,0 +1,14 @@
+services:
+  - name: recipes-backend
+    type: web
+    runtime: node
+    repo: https://github.com/priyanshu9026/RecipiesWebsite
+    branch: main
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://singpriyanshu22:oKkKRlSkhDDZPIMN@mynewproject.0heid.mongodb.net/
+      - key: PORT
+        value: 3000
